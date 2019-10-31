@@ -17,30 +17,47 @@
                         <button width="1" alignment="left" title="Give Me a Name" id="7J8-K5-e9e">
                             <connections>
                                 <action selector="nameButton" destination="AgC-eL-Hgc" id="Xbh-7u-GWJ"/>
-                                <segue destination="bdj-HG-BXf" kind="push" id="0Mh-DK-xp9"/>
                             </connections>
                         </button>
-                        <label width="134" height="18" alignment="left" id="iam-kx-Slb"/>
-                        <imageView height="66" alignment="center" verticalAlignment="center" image="caterpie" id="rmY-iE-29r"/>
+                        <imageView height="56" alignment="left" id="nir-7p-mLC"/>
+                        <label width="50" height="15" alignment="center" text="Label" id="fbN-Er-hCu"/>
+                        <button width="1" alignment="left" title="Start Game" id="zmH-eV-rpb">
+                            <connections>
+                                <action selector="startGame" destination="AgC-eL-Hgc" id="enK-OO-4Af"/>
+                                <segue destination="bdj-HG-BXf" kind="push" id="Sre-O5-iJL"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="imageLabel" destination="rmY-iE-29r" id="KA5-eL-YL4"/>
+                        <outlet property="imageView" destination="nir-7p-mLC" id="6gd-ak-3Ae"/>
+                        <outlet property="nameLabel" destination="fbN-Er-hCu" id="M0F-lH-LYP"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="237" y="150.5"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Second Interface Controller-->
         <scene sceneID="G9d-DI-h0Z">
             <objects>
-                <controller id="bdj-HG-BXf">
+                <controller id="bdj-HG-BXf" customClass="SecondInterfaceController" customModule="CommunicationTest_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="98" height="25" alignment="left" text="name Label" id="DKR-X3-7TH"/>
-                        <imageView height="67" alignment="left" id="bjd-tC-anj"/>
-                        <button width="1" alignment="left" title="Start Game" id="7K8-2E-fUJ"/>
+                        <button width="1" height="23" alignment="left" verticalAlignment="bottom" title="Feed" id="cIE-ps-IB1">
+                            <connections>
+                                <action selector="feedButton" destination="bdj-HG-BXf" id="Hfp-qd-BIJ"/>
+                            </connections>
+                        </button>
+                        <label width="127" height="24" alignment="left" text="Health" id="X4z-RR-eRV"/>
+                        <label width="130" height="24" alignment="left" text="Hunger" id="rbI-sE-b8F"/>
+                        <imageView height="58" alignment="left" id="V4A-oY-YKc"/>
                     </items>
+                    <connections>
+                        <outlet property="healthLabel" destination="X4z-RR-eRV" id="re1-Uq-Rm2"/>
+                        <outlet property="hungerLabel" destination="rbI-sE-b8F" id="M5L-SL-03b"/>
+                        <outlet property="imageView" destination="V4A-oY-YKc" id="ggq-PV-4Sj"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="136" y="394"/>
+            <point key="canvasLocation" x="154" y="496"/>
         </scene>
     </scenes>
 </document>

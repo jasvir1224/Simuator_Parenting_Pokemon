@@ -15,9 +15,10 @@ class InterfaceController: WKInterfaceController ,
 WCSessionDelegate{
     
     
+    @IBOutlet weak var imageView: WKInterfaceImage!
     
-    @IBOutlet weak var imageLabel: WKInterfaceImage!
     
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -25,8 +26,8 @@ WCSessionDelegate{
     
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        _ = message["imagename"] as! String
-        imageLabel.setImage(UIImage(named: "imagename"))
+       let imagename = message["name"] as! String
+       self.imageView.setImage(UIImage(named: "imagename"))
         
         
         print("WATCH: Got message from Phone")
@@ -55,7 +56,20 @@ WCSessionDelegate{
     
     
     @IBAction func nameButton() {
+        
+        let suggestedResponses = ["Albert", "Pritesh", "Emad", "Kiyani"]
+        presentTextInputController(withSuggestions: suggestedResponses, allowedInputMode: .plain) { (results) in
+            
+            
+            if (results != nil && results!.count > 0) {
+                // 2. write your code to process the person's response
+                let userResponse = results?.first as? String
+                self.nameLabel.setText(userResponse)
+        
     }
+    }}
     
-
+    
+    @IBAction func startGame() {
+    }
 }

@@ -64,7 +64,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         if (WCSession.default.isReachable == true) {
             // Here is the message you want to send to the watch
             // All messages get sent as dictionaries
-            let message = ["imagename":"pikachu"]as [String : Any]
+            let message = ["name": "pikachu" ]as [String : Any]
             
             // Send the message
             WCSession.default.sendMessage(message, replyHandler:nil)
@@ -82,7 +82,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         if (WCSession.default.isReachable == true) {
             // Here is the message you want to send to the watch
             // All messages get sent as dictionaries
-            let message = ["imagename": "caterpie"] as [String :  Any]
+            let message = ["name": "caterpie"  ] as [String :  Any]
             
             // Send the message
             WCSession.default.sendMessage(message, replyHandler:nil)
