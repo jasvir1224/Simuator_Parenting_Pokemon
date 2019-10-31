@@ -8,14 +8,39 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController ,
+WCSessionDelegate{
+    
+    
+    
+    @IBOutlet weak var imageLabel: WKInterfaceImage!
+    
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        _ = message["imagename"] as! String
+        imageLabel.setImage(UIImage(named: "imagename"))
+        
+        
+        print("WATCH: Got message from Phone")
+       
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+        
     }
     
     override func willActivate() {
@@ -27,5 +52,10 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    
+    @IBAction func nameButton() {
+    }
+    
 
 }

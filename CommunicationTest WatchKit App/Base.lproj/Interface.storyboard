@@ -1,15 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CommunicationTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Give Me a Name" id="7J8-K5-e9e">
+                            <connections>
+                                <action selector="nameButton" destination="AgC-eL-Hgc" id="Xbh-7u-GWJ"/>
+                                <segue destination="bdj-HG-BXf" kind="push" id="0Mh-DK-xp9"/>
+                            </connections>
+                        </button>
+                        <label width="134" height="18" alignment="left" id="iam-kx-Slb"/>
+                        <imageView height="66" alignment="center" verticalAlignment="center" image="caterpie" id="rmY-iE-29r"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageLabel" destination="rmY-iE-29r" id="KA5-eL-YL4"/>
+                    </connections>
+                </controller>
             </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="G9d-DI-h0Z">
+            <objects>
+                <controller id="bdj-HG-BXf">
+                    <items>
+                        <label width="98" height="25" alignment="left" text="name Label" id="DKR-X3-7TH"/>
+                        <imageView height="67" alignment="left" id="bjd-tC-anj"/>
+                        <button width="1" alignment="left" title="Start Game" id="7K8-2E-fUJ"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="136" y="394"/>
         </scene>
     </scenes>
 </document>
