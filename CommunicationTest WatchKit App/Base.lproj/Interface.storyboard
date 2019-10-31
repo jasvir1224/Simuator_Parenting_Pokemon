@@ -20,7 +20,7 @@
                             </connections>
                         </button>
                         <imageView height="56" alignment="left" id="nir-7p-mLC"/>
-                        <label width="50" height="15" alignment="center" text="Label" id="fbN-Er-hCu"/>
+                        <label width="79" height="15" alignment="center" text="Label" id="fbN-Er-hCu"/>
                         <button width="1" alignment="left" title="Start Game" id="zmH-eV-rpb">
                             <connections>
                                 <action selector="startGame" destination="AgC-eL-Hgc" id="enK-OO-4Af"/>
@@ -41,23 +41,28 @@
             <objects>
                 <controller id="bdj-HG-BXf" customClass="SecondInterfaceController" customModule="CommunicationTest_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" height="23" alignment="left" verticalAlignment="bottom" title="Feed" id="cIE-ps-IB1">
+                        <label width="127" height="18" alignment="left" text="Health" id="X4z-RR-eRV"/>
+                        <label width="130" height="16" alignment="left" text="Hunger" id="rbI-sE-b8F"/>
+                        <button width="131" height="31" alignment="left" title="Hibernate" id="Q3R-hw-ca2">
+                            <connections>
+                                <action selector="hibernateButton" destination="bdj-HG-BXf" id="amH-gH-hCa"/>
+                            </connections>
+                        </button>
+                        <button width="131" height="33" alignment="center" verticalAlignment="center" title="Feed" id="cIE-ps-IB1">
                             <connections>
                                 <action selector="feedButton" destination="bdj-HG-BXf" id="Hfp-qd-BIJ"/>
                             </connections>
                         </button>
-                        <label width="127" height="24" alignment="left" text="Health" id="X4z-RR-eRV"/>
-                        <label width="130" height="24" alignment="left" text="Hunger" id="rbI-sE-b8F"/>
-                        <imageView height="58" alignment="left" id="V4A-oY-YKc"/>
+                        <label width="102" alignment="center" verticalAlignment="bottom" text="Label" id="j3J-KX-okA"/>
                     </items>
                     <connections>
                         <outlet property="healthLabel" destination="X4z-RR-eRV" id="re1-Uq-Rm2"/>
                         <outlet property="hungerLabel" destination="rbI-sE-b8F" id="M5L-SL-03b"/>
-                        <outlet property="imageView" destination="V4A-oY-YKc" id="ggq-PV-4Sj"/>
+                        <outlet property="pokemonstate" destination="j3J-KX-okA" id="19v-tO-cee"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="154" y="496"/>
+            <point key="canvasLocation" x="154" y="493"/>
         </scene>
     </scenes>
 </document>
