@@ -11,8 +11,7 @@ import Foundation
 import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController ,
-WCSessionDelegate{
+class InterfaceController: WKInterfaceController ,WCSessionDelegate{
     
     
     @IBOutlet weak var imageView: WKInterfaceImage!

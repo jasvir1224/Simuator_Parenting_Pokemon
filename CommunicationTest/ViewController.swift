@@ -12,9 +12,7 @@ import WatchConnectivity
 class ViewController: UIViewController, WCSessionDelegate {
     
     
-    @IBOutlet weak var state: UILabel!
     
-    @IBOutlet weak var healthLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
     
